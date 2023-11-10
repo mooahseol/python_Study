@@ -230,8 +230,3 @@ for mon in range(1, 13) :
             print(end=',')
     print() #개행
 
-<<<<<<< HEAD
-=======
-
-# %%
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b

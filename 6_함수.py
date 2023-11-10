@@ -42,7 +42,6 @@ say_myself("홍길동", 30) #man 매개변수 생략 가능
 say_myself("김하나", man=False, age=27) #매개변수 이름으로 값 지정
 say_myself("김현수")
 
-<<<<<<< HEAD
 # def say_myself(name="", age, man=True) :
 #     print(f'나의 이름은 {name}입니다.')
 #     print(f'나이는 {age}입니다.')
@@ -50,15 +49,6 @@ say_myself("김현수")
 #         print("남자입니다.")
 #     else :
 #         print("여자입니다.")
-=======
-def say_myself(name="", age="", man=True) :
-    print(f'나의 이름은 {name}입니다.')
-    print(f'나이는 {age}입니다.')
-    if man :
-        print("남자입니다.")
-    else :
-        print("여자입니다.")
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
 
 # %%
 # 함수의 호출 방식
@@ -179,10 +169,7 @@ def getListAvg(numList) :
 print(getListAvg([1,2,3,4,5]))
 numList = [2,4,5]
 print(getListAvg(numList))
-<<<<<<< HEAD
 print(getListAvg(num_list))
-=======
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
 
 # %%
 # 합성 저항 구하는 함수
@@ -203,7 +190,6 @@ def getTotalResis(rList, serial=True) :
 print(getTotalResis([1,2,3,4])) #직렬저항
 print(getTotalResis([1,2,3,4], False)) #병렬저항
 
-<<<<<<< HEAD
 # %%
 # 요일을 구하는 함수
 # 입력 : 년, 월, 일 (정수형)
@@ -211,16 +197,6 @@ print(getTotalResis([1,2,3,4], False)) #병렬저항
 # 제라의 공식 이용 : ((21*a//4)+(5*b//4)+(26*(c+1)//10)+d-1)%7
 # a=연도의 앞 2자리, b=연도의 뒤 2자리, c=월, d=일
 # 단, c의 값이 1,2일 경우 13, 14로 바꿔서 계산하고 년도를 1빼준다.
-=======
-
-# %%
-# 요일을 구하는 함수
-# 입력 : 년, 월, 일 (정수형)
-# 출력 : 0~6 (0:일요일, 1:월요일, ...6:토요일)
-# 제라의 공식 이용 : ((21*a//4)+(5*b//4)+(26*(c+1)//10)+d-1)%7
-# a=연도의 앞 2자리, b=연도의 뒤 2자리, c=월, d=일
-# 단, c의 값이 1,2일 경우 13, 14로 바꾸어 계산하고 연도를 1빼준다.
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
 
 year, mon, day = 2023, 11, 2
 if mon <= 2 :
@@ -232,11 +208,7 @@ print(a,b)
 week = ((21*a//4)+(5*b//4)+(26*(c+1)//10)+d-1)%7
 print(week)
 
-<<<<<<< HEAD
 def getWeek(year, mon, day, kor_mode=False) :
-=======
-def getweek (year, mon, day, kor_mode=False) :
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
     if mon <= 2 :
         mon += 12
         year -= 1
@@ -246,7 +218,6 @@ def getweek (year, mon, day, kor_mode=False) :
     if kor_mode :
         #한글로 요일 표시
         week_kr = ["일", "월", "화", "수", "목", "금", "토"]
-<<<<<<< HEAD
         return week_kr[w]  
     else :
         return w 
@@ -277,41 +248,16 @@ def getTotalResis(rList) :
     for r in rList :
         total += 1/r
     return 1/total    
-=======
-        return week_kr[w]
-    else :
-        return w
-    
-print(getweek(2023, 11, 2))
-print(getweek(2023, 11, 3, True))
-
-# %%
-# (2) 리스트컴프리헨션을 이용해서 병렬저항의 합성저항값을 출력
-# 입력 저항값 리스트 ex) [1,2,3,4, ]
-# 출력 1.23
-# 리스트컴프리헨션을 이용해서 간결하게 함수를 만드시오.
-
-def getTotalResis(rList) :
-    total = 0
-    for r in rList :
-        total += 1/r
-    return 1/total
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
 print(getTotalResis([1,2,3]))
 
 def getTotalResis(rList) :
     total = sum([1/r for r in rList])
-<<<<<<< HEAD
     return 1/total 
-=======
-    return 1/total
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
 
 def getTotalResis(rList) :
     return 1/sum([1/r for r in rList])
 
 print(getTotalResis([1,2,3]))
-<<<<<<< HEAD
 
 
 # %%
@@ -326,20 +272,6 @@ print(getTotalResis([1,2,3]))
 #[25 26 27 28 29 30   ]
 
 def getWeek(year, mon, day, kor_mode=False) :
-=======
-# %%
-# (1) 달력 출력
-#연도와, 달을 입력받아서 아래와 같이 출력
-#     2023년도 11월
-# 일 월 화 수 목 금 토
-#             01 02 03
-# 04 05 06 07 08 09 10
-# 11 12 13 14 15 16 17 
-# 18 19 20 21 22 23 24
-# 25 26 27 28 29 30
-
-def getweek (year, mon, day, kor_mode=False) :
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
     if mon <= 2 :
         mon += 12
         year -= 1
@@ -349,7 +281,6 @@ def getweek (year, mon, day, kor_mode=False) :
     if kor_mode :
         #한글로 요일 표시
         week_kr = ["일", "월", "화", "수", "목", "금", "토"]
-<<<<<<< HEAD
         return week_kr[w]  
     else :
         return w 
@@ -372,49 +303,16 @@ def printCalendar(year, mon) :
         calendar[start_idx//7][start_idx%7] = i
         start_idx += 1
     # print(calendar)
-=======
-        return week_kr[w]
-    else :
-        return w
-    
-def printcelender(year, mon) :
-    celender = [[0]*7 for i in range(6)]
-    #print(celender) #6행, 7행
-
-    #year, mon = 2023, 11
-    lastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if mon == 2 :  
-        if (year % 4 == 0) and (year%100!=0 or year%400==0) :
-            lastDays[1] = 29
-        
-    start_idx = getweek(year, mon, 1)
-    #print(start_idx) #요일, 캘린더의 날짜 시작 위치
-
-    #1~last_day까지 범위
-    for i in range(1, lastDays[mon-1]+1) :
-        celender[start_idx//7][start_idx%7] = i
-                #행 인덱스     #열 인덱스   
-        #start_idx 0~6   : r:0, 0~6
-        #start_idx 7~13  : r:1, 0~6
-        #start_idx 14~20 : r:2, 0~6
-        start_idx += 1
-    #print(celender)  
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
 
     #달력 출력 : 리스트의 모든 요소를 접근
     title = f'{year}년도 {mon}월'
     print(f'{title:^20}') #^:가운데 정렬
-<<<<<<< HEAD
     weeks = ['일','월','화','수','목','금','토']
-=======
-    weeks = ["일", "월", "화", "수", "목", "금", "토"]
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
     for w in weeks :
         if w == '일' :
             #빨간색
             print(f'\033[31m{w}\033[0m', end=' ')
         elif w == '토' :
-<<<<<<< HEAD
             #파란색
             print(f'\033[34m{w}\033[0m', end=' ')
         else :
@@ -426,25 +324,11 @@ def printcelender(year, mon) :
         if sum(calendar[r]) == 0 :
             continue
         for c in range(len(calendar[0])) :
-=======
-            print(f'\033[34m{w}\033[0m', end=' ')
-            #파란색
-        else :    
-            print(f'{w}', end=' ')
-    print()
-
-    for r in range(len(celender)) :
-        #한주 출력
-        if sum(celender[r]) == 0 :
-            continue
-        for c in range(len(celender[0])) :
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
             #색깔 지정
             if c == 0 :
                 print(f'\033[31m', end='')
             elif c == 6 :
                 print(f'\033[34m', end='')
-<<<<<<< HEAD
             #날짜 출력 
             if calendar[r][c] == 0 :
                 print(' '*4, end=' ')
@@ -456,16 +340,3 @@ def printcelender(year, mon) :
 
 printCalendar(2022, 7)
 printCalendar(2023, 2)
-=======
-            #날짜 출력
-            if celender[r][c] == 0 :
-                print(' '*2, end=' ')
-            else :
-                print(f'{celender[r][c]:0>2}', end=' ')
-            #색깔 초기화
-            print(f'\033[0m', end='')
-        print()
-        
-printcelender(2022,7)
-printcelender(2023,2)
->>>>>>> c3717747ff827c940e3538b872187e100e4d4a1b
